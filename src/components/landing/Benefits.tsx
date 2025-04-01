@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface BenefitProps {
@@ -8,7 +9,7 @@ interface BenefitProps {
 
 const BenefitCard: React.FC<BenefitProps> = ({ title, description, icon }) => {
   return (
-    <div className="w-[33%] max-md:w-full max-md:ml-0">
+    <div className="flex-1 px-4 max-md:w-full max-md:ml-0">
       <div className="flex grow flex-col items-center text-base text-[rgba(98,100,128,1)] font-normal text-center mt-[34px] max-md:mt-10">
         {icon && (
           <img
@@ -52,8 +53,8 @@ const Benefits: React.FC = () => {
         UNLOCK YOUR GLOBAL <br />
         POTENTIAL
       </h2>
-      <div className="w-[1145px] max-w-full mt-[39px]">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+      <div className="w-[1145px] max-w-full mt-[39px] px-4">
+        <div className="gap-8 flex justify-between items-stretch max-md:flex-col max-md:items-center">
           {benefits.map((benefit, index) => (
             <BenefitCard
               key={index}
