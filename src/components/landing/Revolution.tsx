@@ -41,8 +41,8 @@ const Revolution: React.FC = () => {
               infrastructure.
             </p>
             <a
-              href="#"
-              className="bg-[rgba(36,29,201,1)] overflow-hidden text-xl text-white font-medium tracking-[-0.4px] leading-[1.1] mt-[49px] px-10 py-[22px] rounded-[50px] max-md:mt-10 max-md:px-5 hover:bg-opacity-90 transition-colors inline-block w-fit"
+              href="https://tmr-frontend.vercel.app/"
+              className="bg-[rgba(36,29,201,1)] flex items-center gap-2.5 overflow-hidden text-white text-base font-medium tracking-[-0.32px] min-h-10 px-[27px] py-2 rounded-[50px] hover:bg-opacity-90 transition-colors mt-[49px] w-fit"
               aria-label="Get Started"
             >
               Get Started

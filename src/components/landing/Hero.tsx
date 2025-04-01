@@ -17,22 +17,22 @@ const Hero: React.FC = () => {
           payment businesses.
         </p>
       </div>
-      <div className="flex gap-5 overflow-hidden text-base font-medium tracking-[-0.4px] leading-none mt-[57px] max-md:mt-10">
+      <div className="flex gap-5 overflow-hidden text-base font-medium tracking-[-0.32px] leading-none mt-[57px] max-md:mt-10">
         <a
-          href="#"
-          className="bg-[rgba(36,29,201,1)] flex items-center gap-4 overflow-hidden text-white w-40 px-5 py-3 rounded-[50px] hover:bg-opacity-90 transition-colors"
+          href="https://tmr-frontend.vercel.app/"
+          className="bg-[rgba(36,29,201,1)] flex items-center gap-2.5 overflow-hidden text-white min-h-10 px-[27px] py-2 rounded-[50px] hover:bg-opacity-90 transition-colors"
           aria-label="Get Started"
         >
-          <span className="self-stretch my-auto">Get Started</span>
+          <span>Get Started</span>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/67769e4e93262c47df521441ba7427c518932542?placeholderIfAbsent=true"
             alt="Arrow right"
-            className="aspect-[1] object-contain w-3 self-stretch shrink-0 my-auto"
+            className="aspect-[1] object-contain w-3"
           />
         </a>
         <a
           href="#"
-          className="self-stretch border gap-4 overflow-hidden text-[rgba(36,29,201,1)] w-40 px-5 py-3 rounded-[50px] border-[rgba(36,29,201,1)] border-solid hover:bg-[rgba(36,29,201,0.05)] transition-colors"
+          className="flex items-center gap-2.5 overflow-hidden text-[rgba(36,29,201,1)] min-h-10 px-[27px] py-2 rounded-[50px] border border-[rgba(36,29,201,1)] hover:bg-[rgba(36,29,201,0.05)] transition-colors"
           aria-label="Learn More"
         >
           Learn More

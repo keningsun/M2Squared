@@ -10,7 +10,7 @@ const Header: React.FC = () => {
           className="aspect-[7.87] object-contain w-[314px]"
         />
         <a
-          href="#"
+          href="https://tmr-frontend.vercel.app/"
           className="self-stretch bg-[rgba(36,29,201,1)] min-h-10 gap-2.5 overflow-hidden px-[27px] py-2 rounded-[50px] max-md:px-5 hover:bg-opacity-90 transition-colors"
           aria-label="Launch App"
         >

@@ -25,7 +25,9 @@ const ServiceCard: React.FC<ServiceProps> = ({
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full ${index === 0 ? "w-[500px]" : "w-full"}`}
+            className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full ${
+              index === 0 ? "w-[500px]" : "w-full"
+            }`}
           >
             <h4 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-[1.4] max-md:max-w-full">
               {section.heading}
@@ -37,7 +39,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
         ))}
       </div>
       <a
-        href="#"
+        href="https://tmr-frontend.vercel.app/"
         className="bg-[rgba(36,29,201,1)] flex w-40 max-w-full items-center gap-4 overflow-hidden text-base text-white font-medium tracking-[-0.4px] leading-none mt-12 px-5 py-3 rounded-[50px] max-md:mt-10 hover:bg-opacity-90 transition-colors"
         aria-label="Get Started"
       >
@@ -65,7 +67,11 @@ const ServiceCard: React.FC<ServiceProps> = ({
 
   return (
     <div
-      className={`bg-[rgba(241,241,249,1)] flex w-full items-center gap-[40px_58px] overflow-hidden justify-between flex-wrap mt-10 ${isImageLeft ? "pl-5 pr-[60px]" : "pl-[60px] pr-5"} py-5 rounded-[32px] max-md:max-w-full max-md:${isImageLeft ? "pr-5" : "pl-5"}`}
+      className={`bg-[rgba(241,241,249,1)] flex w-full items-center gap-[40px_58px] overflow-hidden justify-between flex-wrap mt-10 ${
+        isImageLeft ? "pl-5 pr-[60px]" : "pl-[60px] pr-5"
+      } py-5 rounded-[32px] max-md:max-w-full max-md:${
+        isImageLeft ? "pr-5" : "pl-5"
+      }`}
     >
       {isImageLeft ? (
         <>

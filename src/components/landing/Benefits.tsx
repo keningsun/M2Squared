@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface BenefitProps {
@@ -18,10 +17,12 @@ const BenefitCard: React.FC<BenefitProps> = ({ title, description, icon }) => {
             className="aspect-[1] object-contain w-10"
           />
         )}
-        <h3 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-7">
+        <h3 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-7 whitespace-pre-line">
           {title}
         </h3>
-        <p className="leading-[26px] self-stretch mt-[29px]">{description}</p>
+        <p className="leading-[26px] self-stretch mt-[29px] whitespace-pre-line">
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -30,20 +31,19 @@ const BenefitCard: React.FC<BenefitProps> = ({ title, description, icon }) => {
 const Benefits: React.FC = () => {
   const benefits = [
     {
-      title: "Elevate Your Cross-Border \nReach",
+      title: "Elevate Your Cross-Border Reach",
       description:
-        "Enhance your international payment \ncapabilities with near-instant settlements \nand streamlined operations, positioning \nyour business for worldwide success.",
+        "Enhance your international payment\ncapabilities with near-instant settlements\nand streamlined operations, positioning\nyour business for worldwide success.",
     },
     {
-      title: "Optimize Capital Efficiency\n",
+      title: "Optimize Capital Efficiency",
       description:
-        "Leverage our on-chain yield pools for \nstable returns on your digital assets, \nensuring consistent liquidity while \nminimizing the overheads of conventional \nfinancing.",
-      icon: "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/9832ac28a9e63d1a9248cc51ae919a25c5a55821?placeholderIfAbsent=true",
+        "Leverage our on-chain yield pools for\nstable returns on your digital assets,\nensuring consistent liquidity while\nminimizing the overheads of conventional\nfinancing.",
     },
     {
-      title: "Compliance That Fits Your \nNeeds",
+      title: "Compliance That Fits Your Needs",
       description:
-        "Our robust KYB and regulatory framework \nadapt to businesses of all sizes—enabling \nsecure, compliant expansion across \nborders without the usual headaches.",
+        "Our robust KYB and regulatory framework\nadapt to businesses of all sizes—enabling\nsecure, compliant expansion across\nborders without the usual headaches.",
     },
   ];
 
@@ -60,7 +60,6 @@ const Benefits: React.FC = () => {
               key={index}
               title={benefit.title}
               description={benefit.description}
-              icon={benefit.icon}
             />
           ))}
         </div>

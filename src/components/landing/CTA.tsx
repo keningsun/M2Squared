@@ -19,7 +19,7 @@ const CTA: React.FC = () => {
           </p>
           <a
             href="#"
-            className="w-48 max-w-full font-medium tracking-[-0.4px] leading-[1.1] mt-12 px-11 py-[22px] rounded-[50px] border-[rgba(36,29,201,1)] border-solid border-2 max-md:mt-10 max-md:px-5 hover:bg-[rgba(36,29,201,0.05)] transition-colors text-center"
+            className="flex items-center gap-2.5 overflow-hidden text-[rgba(36,29,201,1)] text-base font-medium tracking-[-0.32px] min-h-10 px-[27px] py-2 rounded-[50px] border border-[rgba(36,29,201,1)] hover:bg-[rgba(36,29,201,0.05)] transition-colors mt-12"
             aria-label="Learn More"
           >
             Learn More
