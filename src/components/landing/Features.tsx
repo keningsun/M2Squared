@@ -47,7 +47,21 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(237,237,240,1)] self-stretch flex w-full flex-col items-center justify-center mt-[60px] px-20 py-[165px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[100px]">
+    <section className="bg-[rgba(237,237,240,1)] self-stretch flex w-full flex-col items-center justify-center mt-[60px] px-20 py-[165px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[100px] relative">
+      {/* 左上角装饰图片 */}
+      <img
+        src="/tpt_1.svg"
+        alt="Decorative element"
+        className="absolute top-0 left-0 w-[200px] object-contain pointer-events-none"
+      />
+
+      {/* 右下角装饰图片 */}
+      <img
+        src="/tpt_1.svg"
+        alt="Decorative element"
+        className="absolute bottom-0 right-0 w-[200px] object-contain pointer-events-none transform rotate-180"
+      />
+
       <div className="flex w-[1240px] max-w-full flex-col items-stretch -mb-9 max-md:mb-2.5">
         <h2 className="text-[rgba(36,29,201,1)] text-5xl font-bold leading-none tracking-[-2px] text-center uppercase self-center max-md:max-w-full max-md:text-[40px]">
           Our Unmatched Edge

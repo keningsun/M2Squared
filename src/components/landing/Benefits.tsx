@@ -50,8 +50,7 @@ const Benefits: React.FC = () => {
   return (
     <section className="flex flex-col items-center mt-[133px] max-md:mt-10">
       <h2 className="text-[rgba(36,29,201,1)] text-5xl font-bold leading-[56px] tracking-[-2.2px] text-center uppercase max-md:max-w-full max-md:text-[40px] max-md:leading-[52px]">
-        UNLOCK YOUR GLOBAL <br />
-        POTENTIAL
+        UNLOCK YOUR GLOBAL POTENTIAL
       </h2>
       <div className="w-[1145px] max-w-full mt-[39px] px-4">
         <div className="gap-8 flex justify-between items-stretch max-md:flex-col max-md:items-center">
