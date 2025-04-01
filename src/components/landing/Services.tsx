@@ -17,22 +17,20 @@ const ServiceCard: React.FC<ServiceProps> = ({
   sections,
 }) => {
   const content = (
-    <div className="self-stretch min-w-60 overflow-hidden w-[510px] my-auto max-md:max-w-full">
-      <div className="w-full overflow-hidden max-md:max-w-full">
+    <div className="self-stretch min-w-60 overflow-hidden w-[510px] my-auto max-xl:w-full max-xl:px-6">
+      <div className="w-full overflow-hidden">
         <h3 className="text-[rgba(36,29,201,1)] text-[32px] font-bold leading-none tracking-[-0.64px]">
           {title}
         </h3>
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full ${
-              index === 0 ? "w-[500px]" : "w-full"
-            }`}
+            className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full`}
           >
-            <h4 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-[1.4] max-md:max-w-full">
+            <h4 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-[1.4]">
               {section.heading}
             </h4>
-            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-6 mt-2 max-md:max-w-full">
+            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-6 mt-2">
               {section.description}
             </p>
           </div>
@@ -40,7 +38,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
       </div>
       <a
         href="https://tmr-frontend.vercel.app/"
-        className="bg-[rgba(36,29,201,1)] flex w-40 max-w-full items-center gap-4 overflow-hidden text-base text-white font-medium tracking-[-0.4px] leading-none mt-12 px-5 py-3 rounded-[50px] max-md:mt-10 hover:bg-opacity-90 transition-colors"
+        className="bg-[rgba(36,29,201,1)] flex w-40 max-w-full items-center gap-4 overflow-hidden text-base text-white font-medium tracking-[-0.4px] leading-none mt-12 px-5 py-3 rounded-[50px] max-xl:mt-10 hover:bg-opacity-90 transition-colors"
         aria-label="Get Started"
       >
         <span className="self-stretch my-auto">Get Started</span>
@@ -61,7 +59,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
     <img
       src={image}
       alt={title}
-      className="aspect-[0.98] object-contain w-[510px] self-stretch min-w-60 my-auto max-md:max-w-full"
+      className="aspect-[0.98] object-contain w-[510px] self-stretch min-w-60 my-auto max-xl:w-full max-xl:max-w-[400px] max-xl:mx-auto max-xl:px-6"
     />
   );
 
@@ -69,19 +67,21 @@ const ServiceCard: React.FC<ServiceProps> = ({
     <div
       className={`bg-[rgba(241,241,249,1)] flex w-full items-center gap-[40px_58px] overflow-hidden justify-between flex-wrap mt-10 ${
         isImageLeft ? "pl-5 pr-[60px]" : "pl-[60px] pr-5"
-      } py-5 rounded-[32px] max-md:max-w-full max-md:${
-        isImageLeft ? "pr-5" : "pl-5"
-      }`}
+      } py-5 rounded-[32px] max-xl:flex-col max-xl:px-6 max-xl:py-10 max-xl:gap-8`}
     >
       {isImageLeft ? (
         <>
-          {imageElement}
+          <div className="max-xl:w-full max-xl:flex max-xl:justify-center">
+            {imageElement}
+          </div>
           {content}
         </>
       ) : (
         <>
           {content}
-          {imageElement}
+          <div className="max-xl:w-full max-xl:flex max-xl:justify-center">
+            {imageElement}
+          </div>
         </>
       )}
     </div>
