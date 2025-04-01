@@ -2,7 +2,7 @@ import React from "react";
 
 const Revolution: React.FC = () => {
   return (
-    <section className="w-[1171px] max-w-full mt-[117px] max-md:mt-10">
+    <section className="w-[1171px] max-w-full mt-[117px] px-5 max-md:mt-10">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         <div className="w-[54%] max-md:w-full max-md:ml-0">
           <div className="flex grow flex-col items-stretch justify-center px-[66px] py-14 rounded-[40px] max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -14,7 +14,7 @@ const Revolution: React.FC = () => {
           </div>
         </div>
         <div className="w-[46%] ml-5 max-md:w-full max-md:ml-0">
-          <div className="flex grow flex-col text-[rgba(36,29,201,1)] mt-2.5 max-md:max-w-full max-md:mt-10">
+          <div className="flex grow flex-col text-[rgba(36,29,201,1)] mt-2.5 max-md:max-w-full max-md:mt-10 max-md:px-4">
             <h2 className="text-[50px] font-bold leading-[55px] tracking-[-2.75px] uppercase max-md:text-[40px] max-md:leading-[49px]">
               A PAYMENT <br />
               REVOLUTION
@@ -24,20 +24,23 @@ const Revolution: React.FC = () => {
             </h3>
             <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
               Discover how our RWA platform channels liquidity from digital{" "}
-              <br />
+              <br className="max-md:hidden" />
               asset markets into cross-border payments, cutting transaction{" "}
-              <br />
+              <br className="max-md:hidden" />
               delays and propelling your business forward.
             </p>
             <h3 className="text-[22px] font-semibold leading-[1.2] mt-[37px]">
               Strategic Integration Pays Off
             </h3>
-            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full max-md:mr-1">
-              Through meticulous risk management and streamlined <br />
-              processes, we enable rapid funding access for scaling your <br />
+            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
+              Through meticulous risk management and streamlined{" "}
+              <br className="max-md:hidden" />
+              processes, we enable rapid funding access for scaling your{" "}
+              <br className="max-md:hidden" />
               operations. Every transaction becomes part of a success story{" "}
-              <br />
-              when powered by our transparent, blockchain-based <br />
+              <br className="max-md:hidden" />
+              when powered by our transparent, blockchain-based{" "}
+              <br className="max-md:hidden" />
               infrastructure.
             </p>
             <a
