@@ -2,7 +2,7 @@ import React from "react";
 
 const Revolution: React.FC = () => {
   return (
-    <section className="w-[1171px] max-w-full mt-[117px] px-5 max-md:mt-10">
+    <section className="w-[1440px] max-w-full mt-[117px] px-5 max-md:mt-10">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
         <div className="w-[54%] max-md:w-full max-md:ml-0">
           <div className="flex grow flex-col items-stretch justify-center px-[66px] py-14 rounded-[40px] max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -14,7 +14,7 @@ const Revolution: React.FC = () => {
           </div>
         </div>
         <div className="w-[46%] ml-5 max-md:w-full max-md:ml-0">
-          <div className="flex grow flex-col text-[rgba(36,29,201,1)] mt-2.5 max-md:max-w-full max-md:mt-10 max-md:px-4">
+          <div className="flex grow flex-col text-primary mt-2.5 max-md:max-w-full max-md:mt-10 max-md:px-4">
             <h2 className="text-[50px] font-bold leading-[55px] tracking-[-2.75px] uppercase max-md:text-[40px] max-md:leading-[49px]">
               A PAYMENT <br />
               REVOLUTION
@@ -22,7 +22,7 @@ const Revolution: React.FC = () => {
             <h3 className="text-[22px] font-semibold leading-[1.2] mt-8">
               Real Results with On-Chain Liquidity
             </h3>
-            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
+            <p className="text-muted-foreground text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
               Discover how our RWA platform channels liquidity from digital{" "}
               <br className="max-md:hidden" />
               asset markets into cross-border payments, cutting transaction{" "}
@@ -32,7 +32,7 @@ const Revolution: React.FC = () => {
             <h3 className="text-[22px] font-semibold leading-[1.2] mt-[37px]">
               Strategic Integration Pays Off
             </h3>
-            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
+            <p className="text-muted-foreground text-base font-normal leading-[26px] self-stretch mt-[15px] max-md:max-w-full">
               Through meticulous risk management and streamlined{" "}
               <br className="max-md:hidden" />
               processes, we enable rapid funding access for scaling your{" "}
@@ -45,7 +45,7 @@ const Revolution: React.FC = () => {
             </p>
             <a
               href="https://tmr-frontend.vercel.app/"
-              className="bg-[rgba(36,29,201,1)] flex items-center gap-2.5 overflow-hidden text-white text-base font-medium tracking-[-0.32px] min-h-10 px-[27px] py-2 rounded-[50px] hover:bg-opacity-90 transition-colors mt-[49px] w-fit"
+              className="bg-primary flex justify-center text-primary-foreground text-base font-medium tracking-[-0.32px] min-h-10 py-3 px-8 rounded-[50px] hover:bg-primary/90 transition-colors mt-[49px] w-fit"
               aria-label="Get Started"
             >
               Get Started

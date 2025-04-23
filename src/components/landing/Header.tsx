@@ -1,24 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Header: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="flex w-full flex-col overflow-hidden items-center pt-4 max-md:max-w-full">
-      <div className="flex w-[1187px] max-w-full gap-5 text-base text-white font-medium tracking-[-0.32px] flex-wrap justify-between">
+    <header
+      className={`flex w-full flex-col overflow-hidden items-center pt-4 ${
+        isScrolled
+          ? "fixed top-0 left-0 z-50 bg-white transition-all duration-300"
+          : ""
+      } max-md:max-w-full`}
+    >
+      <div className="flex w-[1440px] max-w-full gap-5 text-base font-medium tracking-[-0.32px] flex-wrap justify-between items-center px-4 md:px-20">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/bf7f41ee9e080cb344d1406dfaa93acf89e41b57?placeholderIfAbsent=true"
-          alt="Tomorrow Finance Logo"
-          className="aspect-[7.87] object-contain w-[314px]"
+          src="/m2square_logo.svg"
+          alt="M2Square Finance Logo"
+          className="h-[60px] object-contain"
         />
         <a
           href="https://tmr-frontend.vercel.app/"
-          className="self-stretch bg-[rgba(36,29,201,1)] min-h-10 gap-2.5 overflow-hidden px-[27px] py-2 rounded-[50px] max-md:px-5 hover:bg-opacity-90 transition-colors"
+          className="bg-primary text-white flex items-center justify-center h-10 py-3 px-8 rounded-[50px] max-md:px-5 hover:bg-primary/90 transition-colors"
           aria-label="Launch App"
         >
           Launch App
         </a>
       </div>
       <div
-        className="bg-[rgba(255,255,255,0.08)] self-stretch flex min-h-px w-full mt-4 max-md:max-w-full"
+        className="bg-white/10 self-stretch flex min-h-px w-full mt-4 max-md:max-w-full"
         aria-hidden="true"
       />
     </header>

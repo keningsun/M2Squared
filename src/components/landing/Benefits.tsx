@@ -9,7 +9,7 @@ interface BenefitProps {
 const BenefitCard: React.FC<BenefitProps> = ({ title, description, icon }) => {
   return (
     <div className="flex-1 px-4 max-md:w-full max-md:ml-0">
-      <div className="flex grow flex-col items-center text-base text-[rgba(98,100,128,1)] font-normal text-center mt-[34px] max-md:mt-10">
+      <div className="flex grow flex-col items-center text-base text-muted-foreground font-normal text-center mt-[34px] max-md:mt-10">
         {icon && (
           <img
             src={icon}
@@ -17,7 +17,7 @@ const BenefitCard: React.FC<BenefitProps> = ({ title, description, icon }) => {
             className="aspect-[1] object-contain w-10"
           />
         )}
-        <h3 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-7 whitespace-pre-line">
+        <h3 className="text-primary text-xl font-semibold leading-7 whitespace-pre-line">
           {title}
         </h3>
         <p className="leading-[26px] self-stretch mt-[29px] whitespace-pre-line">
@@ -49,10 +49,10 @@ const Benefits: React.FC = () => {
 
   return (
     <section className="flex flex-col items-center mt-[133px] max-md:mt-10">
-      <h2 className="text-[rgba(36,29,201,1)] text-5xl font-bold leading-[56px] tracking-[-2.2px] text-center uppercase max-md:max-w-full max-md:text-[40px] max-md:leading-[52px]">
+      <h2 className="text-primary text-5xl font-bold leading-[56px] tracking-[-2.2px] text-center uppercase max-md:max-w-full max-md:text-[40px] max-md:leading-[52px]">
         UNLOCK YOUR GLOBAL POTENTIAL
       </h2>
-      <div className="w-[1145px] max-w-full mt-[39px] px-4">
+      <div className="w-[1440px] max-w-full mt-[39px] px-4">
         <div className="gap-8 flex justify-between items-stretch max-md:flex-col max-md:items-center">
           {benefits.map((benefit, index) => (
             <BenefitCard

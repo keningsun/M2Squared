@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Check } from "lucide-react";
 
 interface ServiceProps {
   title: string;
@@ -8,18 +9,44 @@ interface ServiceProps {
     heading: string;
     description: string;
   }[];
+  benefits?: string[];
+  imageClassName?: string;
 }
+
+// Tab组件
+interface TabProps {
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => {
+  return (
+    <button
+      className={`py-3 px-8 rounded-full text-base font-medium transition-colors ${
+        isActive
+          ? "bg-primary text-primary-foreground"
+          : "bg-transparent text-primary hover:bg-primary/5"
+      }`}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
 
 const ServiceCard: React.FC<ServiceProps> = ({
   title,
   image,
   isImageLeft,
   sections,
+  benefits,
+  imageClassName,
 }) => {
   const content = (
-    <div className="self-stretch min-w-60 overflow-hidden w-[510px] my-auto max-xl:w-full max-xl:px-6">
+    <div className="self-stretch overflow-hidden w-full md:w-1/2 p-10 bg-icon-bg rounded-r-[32px]">
       <div className="w-full overflow-hidden">
-        <h3 className="text-[rgba(36,29,201,1)] text-[32px] font-bold leading-none tracking-[-0.64px]">
+        <h3 className="text-primary text-[32px] font-bold leading-none tracking-[-0.64px]">
           {title}
         </h3>
         {sections.map((section, index) => (
@@ -27,61 +54,63 @@ const ServiceCard: React.FC<ServiceProps> = ({
             key={index}
             className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full`}
           >
-            <h4 className="text-[rgba(36,29,201,1)] text-xl font-semibold leading-[1.4]">
+            <h4 className="text-primary text-xl font-semibold leading-[1.4]">
               {section.heading}
             </h4>
-            <p className="text-[rgba(98,100,128,1)] text-base font-normal leading-6 mt-2">
+            <p className="text-muted-foreground text-base font-normal leading-6 mt-2 whitespace-pre-line">
               {section.description}
             </p>
           </div>
         ))}
+
+        {benefits && (
+          <div className="mt-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center mt-3">
+                <div className="text-primary">
+                  <Check size={20} className="mr-2" />
+                </div>
+                <span className="text-muted-foreground">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <a
         href="https://tmr-frontend.vercel.app/"
-        className="bg-[rgba(36,29,201,1)] flex w-40 max-w-full items-center gap-4 overflow-hidden text-base text-white font-medium tracking-[-0.4px] leading-none mt-12 px-5 py-3 rounded-[50px] max-xl:mt-10 hover:bg-opacity-90 transition-colors"
+        className="bg-primary flex w-40 max-w-full items-center overflow-hidden text-base text-primary-foreground font-medium tracking-[-0.4px] leading-none mt-8 py-3 px-8 rounded-[50px] hover:bg-primary/90 transition-colors"
         aria-label="Get Started"
       >
         <span className="self-stretch my-auto">Get Started</span>
-        <img
-          src={
-            isImageLeft
-              ? "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/01bfbd00bdcc6907875a2d59175464e289e12de1?placeholderIfAbsent=true"
-              : "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/6678f687ae963112775f15b887efbf199bcb9e38?placeholderIfAbsent=true"
-          }
-          alt="Arrow right"
-          className="aspect-[1] object-contain w-3 self-stretch shrink-0 my-auto"
-        />
       </a>
     </div>
   );
 
   const imageElement = (
-    <img
-      src={image}
-      alt={title}
-      className="aspect-[0.98] object-contain w-[510px] self-stretch min-w-60 my-auto max-xl:w-full max-xl:max-w-[400px] max-xl:mx-auto max-xl:px-6"
-    />
+    <div className="w-full md:w-1/2 bg-primary flex justify-center items-center p-10 rounded-l-[32px]">
+      <div className="w-full h-full flex justify-center items-center">
+        <img
+          src={image}
+          alt={title}
+          className={`object-contain max-w-full h-auto max-h-[400px] ${
+            imageClassName || ""
+          }`}
+        />
+      </div>
+    </div>
   );
 
   return (
-    <div
-      className={`bg-[rgba(241,241,249,1)] flex w-full items-center gap-[40px_58px] overflow-hidden justify-between flex-wrap mt-10 ${
-        isImageLeft ? "pl-5 pr-[60px]" : "pl-[60px] pr-5"
-      } py-5 rounded-[32px] max-xl:flex-col max-xl:px-6 max-xl:py-10 max-xl:gap-8`}
-    >
+    <div className="flex w-full overflow-hidden flex-wrap max-md:flex-col rounded-[32px]">
       {isImageLeft ? (
         <>
-          <div className="max-xl:w-full max-xl:flex max-xl:justify-center">
-            {imageElement}
-          </div>
+          {imageElement}
           {content}
         </>
       ) : (
         <>
           {content}
-          <div className="max-xl:w-full max-xl:flex max-xl:justify-center">
-            {imageElement}
-          </div>
+          {imageElement}
         </>
       )}
     </div>
@@ -89,11 +118,14 @@ const ServiceCard: React.FC<ServiceProps> = ({
 };
 
 const Services: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>("yield");
+
   const services = [
     {
+      id: "yield",
+      tabLabel: "On-Chain Yield",
       title: "ON-CHAIN YIELD POOLS",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/3f676c9cac3a8e2a2b9213f064aec432a2baa162?placeholderIfAbsent=true",
+      image: "/s1.svg",
       isImageLeft: true,
       sections: [
         {
@@ -107,12 +139,18 @@ const Services: React.FC = () => {
             "Leverage blockchain-powered smart contracts for trustless \nlending. Enjoy real-time visibility into pool performance and \nrobust risk management strategies.",
         },
       ],
+      benefits: [
+        "Physical and virtual cards",
+        "Issue cards in multiple countries",
+        "Over 11 million cards issued as Wise",
+      ],
     },
     {
+      id: "capital",
+      tabLabel: "Working Capital",
       title: "WORKING CAPITAL FINANCING",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/f6324bf23994ebc91b6f5ff563cc99a2b91fbe88?placeholderIfAbsent=true",
-      isImageLeft: false,
+      image: "/s2.svg",
+      isImageLeft: true,
       sections: [
         {
           heading: "Accelerate Cross-Border Operations",
@@ -125,11 +163,17 @@ const Services: React.FC = () => {
             "Take advantage of stablecoin-based settlements to expand \nyour global reach. Secure real-time funds to seize opportunities \nwithout waiting on traditional finance.",
         },
       ],
+      benefits: [
+        "Multi-currency debit cards with our API",
+        "Set up multi-user group configurations",
+        "Over 11 million debit cards issued so far",
+      ],
     },
     {
+      id: "compliance",
+      tabLabel: "Compliance & KYB",
       title: "COMPLIANCE & KYB",
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/ac33c444a9d3d976005468337b6072cabd453636?placeholderIfAbsent=true",
+      image: "/s3.svg",
       isImageLeft: true,
       sections: [
         {
@@ -143,24 +187,73 @@ const Services: React.FC = () => {
             "Our RWA platform safeguards lenders through transparent \ncredit assessments and secure repayment structures, creating \na trustworthy environment for all stakeholders.",
         },
       ],
+      benefits: [
+        "Transparent credit assessments",
+        "Secure repayment structures",
+        "Comprehensive KYB protocols",
+      ],
+    },
+    {
+      id: "revolution",
+      tabLabel: "Payment Revolution",
+      title: "A PAYMENT REVOLUTION",
+      image: "/s4.svg",
+      isImageLeft: true,
+      imageClassName: "w-[350px] h-[350px] object-contain",
+      sections: [
+        {
+          heading: "Real Results with On-Chain Liquidity",
+          description:
+            "Discover how our RWA platform channels liquidity from digital \nasset markets into cross-border payments, cutting transaction \ndelays and propelling your business forward.",
+        },
+        {
+          heading: "Strategic Integration Pays Off",
+          description:
+            "Through meticulous risk management and streamlined \nprocesses, we enable rapid funding access for scaling your \noperations.",
+        },
+      ],
+      benefits: [
+        "Reduced transaction delays",
+        "Streamlined cross-border payments",
+        "Blockchain-based transparency",
+      ],
     },
   ];
 
+  const activeService =
+    services.find((service) => service.id === activeTab) || services[0];
+
   return (
-    <section className="w-[1200px] max-w-full overflow-hidden mt-[133px] px-5 max-md:mt-10">
-      <h2 className="text-[rgba(36,29,201,1)] text-5xl font-bold leading-none tracking-[-2px] text-center uppercase max-md:max-w-full max-md:text-[40px]">
+    <section className="w-[1440px] max-w-full overflow-hidden mt-[133px] px-5 max-md:mt-10">
+      <h2 className="text-primary text-5xl font-medium leading-none tracking-[-2px] max-md:text-[40px] mb-12">
         Services That Fuel Your Business Growth
       </h2>
 
-      {services.map((service, index) => (
-        <ServiceCard
-          key={index}
-          title={service.title}
-          image={service.image}
-          isImageLeft={service.isImageLeft}
-          sections={service.sections}
-        />
-      ))}
+      <div>
+        {/* Tab 选项卡 */}
+        <div className="flex bg-icon-bg rounded-full p-2 max-w-fit overflow-x-auto mb-10">
+          {services.map((service) => (
+            <Tab
+              key={service.id}
+              label={service.tabLabel}
+              isActive={activeTab === service.id}
+              onClick={() => setActiveTab(service.id)}
+            />
+          ))}
+        </div>
+
+        {/* 服务卡片内容 */}
+        <div>
+          <ServiceCard
+            title={activeService.title}
+            image={activeService.image}
+            isImageLeft={activeService.isImageLeft}
+            sections={activeService.sections}
+            benefits={activeService.benefits}
+            imageClassName={activeService.imageClassName}
+          />
+        </div>
+      </div>
     </section>
   );
 };

@@ -1,29 +1,69 @@
 import React from "react";
+import { ArrowRight } from "lucide-react";
 
 const CTA: React.FC = () => {
   return (
-    <section className="flex flex-col self-stretch relative min-h-[428px] w-full overflow-hidden items-center text-xl text-[rgba(36,29,201,1)] justify-center mt-[117px] px-20 py-[76px] max-md:max-w-full max-md:mt-10 max-md:px-5">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/ca7652c2d00348659dd4a4ce2925ad0b/7c237d405f1a101283360cd04ab53791c8caa455?placeholderIfAbsent=true"
-        alt="Background pattern"
-        className="absolute h-full w-full object-cover inset-0"
-      />
-      <div className="relative bg-white flex w-full max-w-[1346px] flex-col overflow-hidden items-center justify-center px-20 py-[51px] rounded-[32px] max-md:max-w-full max-md:px-5">
-        <div className="flex w-[894px] max-w-full flex-col items-center">
-          <h2 className="text-4xl font-bold leading-none tracking-[-0.72px] text-center uppercase self-stretch max-md:max-w-full">
-            Ready to Scale Your Cross-Border Payments?
-          </h2>
-          <p className="text-[rgba(98,100,128,1)] font-normal leading-[1.4] tracking-[0.16px] text-center mt-[23px] max-md:max-w-full">
-            Join Tomorrow today and transform how you handle global
-            transactions.
-          </p>
-          <a
-            href="#"
-            className="flex items-center gap-2.5 overflow-hidden text-[rgba(36,29,201,1)] text-base font-medium tracking-[-0.32px] min-h-10 px-[27px] py-2 rounded-[50px] border border-[rgba(36,29,201,1)] hover:bg-[rgba(36,29,201,0.05)] transition-colors mt-12"
-            aria-label="Learn More"
-          >
-            Learn More
-          </a>
+    <section className="flex flex-col self-stretch relative w-full overflow-hidden items-center text-xl text-primary justify-center px-0 pt-0 pb-0 max-md:max-w-full max-md:px-0">
+      <div className="w-full bg-primary py-16 md:py-20 shadow-lg overflow-hidden relative">
+        <div className="absolute left-0 top-0 w-full h-full">
+          <div className="absolute -top-20 -left-20 w-[300px] h-[300px] rounded-full bg-[#70B6E8]/10 blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-[250px] h-[250px] rounded-full bg-[#70B6E8]/10 blur-3xl"></div>
+        </div>
+
+        <div className="absolute right-0 top-0 w-1/2 h-full opacity-10">
+          <img
+            src="/cta_bg.png"
+            alt="Background pattern"
+            className="object-cover h-full w-full"
+          />
+        </div>
+
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 px-8 md:px-20 w-full max-w-[1440px] mx-auto">
+          <div className="flex flex-col items-start text-[#70B6E8] max-w-[600px]">
+            <div className="flex items-center mb-4">
+              <div className="h-1 w-10 bg-[#70B6E8] rounded-full mr-3"></div>
+              <span className="text-[#70B6E8] font-medium">
+                Global Payments Solution
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold font-ubuntu leading-tight tracking-[-0.72px] uppercase">
+              Ready to Scale Your Payments?
+            </h2>
+
+            <div className="flex items-center gap-4 mt-8">
+              <a
+                href="#"
+                className="flex justify-center items-center text-primary bg-[#70B6E8] text-base font-medium tracking-[-0.32px] min-h-12 py-3 px-8 rounded-[30px] hover:bg-[#70B6E8]/90 hover:scale-105 transition-all duration-300 shadow-lg group"
+                aria-label="Learn More"
+              >
+                Learn More
+                <ArrowRight
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  size={18}
+                />
+              </a>
+            </div>
+          </div>
+
+          <div className="hidden md:flex flex-col items-center">
+            <div className="w-[260px] h-[260px] bg-[#70B6E8]/5 backdrop-blur-sm rounded-full p-3 border border-[#70B6E8]/30">
+              <div className="w-full h-full rounded-full border-2 border-[#70B6E8]/20 flex items-center justify-center">
+                <div className="text-[#70B6E8] flex flex-col items-center justify-center text-center">
+                  <span className="text-5xl font-bold">24/7</span>
+                  <span className="text-[#70B6E8] text-lg mt-2">
+                    Working Capital
+                  </span>
+                  <div className="flex items-center gap-1 mt-3">
+                    <div className="h-1 w-1 rounded-full bg-[#70B6E8]"></div>
+                    <div className="h-1 w-1 rounded-full bg-[#70B6E8]"></div>
+                    <div className="h-1 w-8 rounded-full bg-[#70B6E8]"></div>
+                    <div className="h-1 w-1 rounded-full bg-[#70B6E8]"></div>
+                    <div className="h-1 w-1 rounded-full bg-[#70B6E8]"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
