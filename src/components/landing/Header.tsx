@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           : ""
       } max-md:max-w-full`}
     >
-      <div className="flex w-[1440px] max-w-full gap-5 text-base font-medium tracking-[-0.32px] flex-wrap justify-between items-center px-4 md:px-20">
+      <div className="flex w-[1440px] max-w-full gap-5 text-base font-medium tracking-[-0.32px] flex-wrap justify-between items-center px-4 md:px-4">
         <img
           src="/m2square_logo.svg"
           alt="M2Square Finance Logo"

@@ -1,137 +1,234 @@
 import React from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white self-stretch w-full text-muted-foreground font-normal tracking-[0.16px] max-md:max-w-full">
-      <div className="border-gray-100 flex w-full flex-col items-center pt-[83px] pb-[22px] px-20 border-t max-md:max-w-full max-md:px-5">
-        <div className="w-[1440px] max-w-full flex flex-col">
-          <div className="flex w-full max-w-full gap-10 justify-between flex-wrap">
-            <div className="flex flex-col max-w-[350px]">
-              <div className="self-start">
-                <img
-                  src="/m2square_logo.svg"
-                  alt="M2Square Finance Logo"
-                  className="h-[45px] object-contain"
-                />
-              </div>
-              <p className="mt-[15px] text-base leading-[28px] tracking-[0.2px]">
-                Bridging On-Chain Liquidity with Real-World Cross-Border
-                Payments
-              </p>
-              <div className="flex items-center gap-3 mt-6">
-                <div className="bg-icon-bg w-[40px] h-[40px] rounded-full flex justify-center items-center text-primary">
-                  <MapPin size={18} strokeWidth={1.5} />
-                </div>
-                <span>123 Finance Street, Singapore</span>
-              </div>
-              <div className="flex items-center gap-3 mt-4">
-                <div className="bg-icon-bg w-[40px] h-[40px] rounded-full flex justify-center items-center text-primary">
-                  <Mail size={18} strokeWidth={1.5} />
-                </div>
-                <span>contact@m2square.finance</span>
-              </div>
-              <div className="flex items-center gap-3 mt-4">
-                <div className="bg-icon-bg w-[40px] h-[40px] rounded-full flex justify-center items-center text-primary">
-                  <Phone size={18} strokeWidth={1.5} />
-                </div>
-                <span>+65 1234 5678</span>
-              </div>
+    <footer className="bg-icon-bg self-stretch w-full text-muted-foreground font-normal max-md:max-w-full">
+      <div className="flex w-full flex-col items-center pt-10 pb-8 px-5 md:px-10">
+        <div className="w-[1200px] max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+            {/* Company and team */}
+            <div>
+              <h3 className="text-primary text-sm font-medium mb-4">
+                Company and team
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Company and team
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Press
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Service status
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Investor relations
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Affiliates and partnerships
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Help centre
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Accessibility
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div className="flex gap-16 flex-wrap">
-              <nav className="flex flex-col">
-                <h3 className="text-primary text-[22px] font-semibold leading-loose tracking-[-0.5px] font-ubuntu">
-                  Company
-                </h3>
+            {/* M2Square Products */}
+            <div>
+              <h3 className="text-primary text-sm font-medium mb-4">
+                M2² Products
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    On-Chain Yield Pools
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Working Capital Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Cross-Border Payments
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    RWA Platform
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Business Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    API Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Mass payments
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h3 className="text-primary text-sm font-medium mb-4">
+                Resources
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    News and blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    API Reference
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Compliance Hub
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Case Studies
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    SWIFT/BIC codes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    IBAN codes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Rate alerts
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Business Calculators
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Follow us */}
+            <div>
+              <h3 className="text-primary text-sm font-medium mb-4">
+                Follow us
+              </h3>
+              <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="mt-5 hover:text-primary transition-colors"
+                  className="text-primary hover:text-primary/80"
+                  aria-label="Facebook"
                 >
-                  About
+                  <Facebook size={18} />
                 </a>
                 <a
                   href="#"
-                  className="mt-4 hover:text-primary transition-colors"
+                  className="text-primary hover:text-primary/80"
+                  aria-label="Twitter"
                 >
-                  Careers
+                  <Twitter size={18} />
                 </a>
                 <a
                   href="#"
-                  className="mt-4 hover:text-primary transition-colors"
+                  className="text-primary hover:text-primary/80"
+                  aria-label="Instagram"
                 >
-                  Contact
+                  <Instagram size={18} />
                 </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  Blog
-                </a>
-              </nav>
-              <nav className="flex flex-col">
-                <h3 className="text-primary text-[22px] font-semibold leading-loose tracking-[-0.5px] font-ubuntu">
-                  Legal
-                </h3>
-                <a
-                  href="#"
-                  className="mt-5 hover:text-primary transition-colors"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  Compliance
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  Security
-                </a>
-              </nav>
-              <nav className="flex flex-col">
-                <h3 className="text-primary text-[22px] font-semibold leading-loose tracking-[-0.5px] font-ubuntu">
-                  Resources
-                </h3>
-                <a
-                  href="#"
-                  className="mt-5 hover:text-primary transition-colors"
-                >
-                  Documentation
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  API Reference
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  Developers
-                </a>
-                <a
-                  href="#"
-                  className="mt-4 hover:text-primary transition-colors"
-                >
-                  FAQ
-                </a>
-              </nav>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-gray-100 w-full text-sm leading-6 mt-12 pt-6 pb-2 text-center">
-            © 2025 M2Square Finance. All rights reserved.
+          <div className="mt-14 border-t border-gray-200 pt-4">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                <img
+                  src="/m2square_logo.svg"
+                  alt="M2Square Finance Logo"
+                  className="h-[22px] object-contain"
+                />
+
+                <div className="flex flex-wrap gap-3 md:gap-5 justify-center md:justify-start mt-3 md:mt-0">
+                  <a href="#" className="text-xs hover:text-primary">
+                    Legal
+                  </a>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Privacy policy
+                  </a>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Country site map
+                  </a>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Cookies Policy
+                  </a>
+                  <a href="#" className="text-xs hover:text-primary">
+                    Modern slavery statement
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-5">
+            <div className="text-xs text-muted-foreground">
+              © M2Square Finance Limited 2025
+            </div>
+            <div className="mt-2 text-xs text-muted-foreground max-w-2xl mx-auto">
+              M2Square Finance Limited is licensed in Singapore as a Money
+              Service Operator by the Monetary Authority of Singapore, licence
+              number: MSO-2023-00123.
+            </div>
           </div>
         </div>
       </div>
