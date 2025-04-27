@@ -42,9 +42,9 @@ export function HeroSpline({ className = "" }: HeroAnimationProps) {
       style={{ background: "transparent" }} // Keep container transparent
     >
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+        <div className="absolute inset-0 flex items-center justify-center bg-white">
           {/* Added a semi-transparent background to loading state */}
-          <div className="animate-pulse text-white">Loading...</div>
+          <div className="animate-pulse text-white"></div>
         </div>
       )}
 
