@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* M2Square Products */}
+            {/* M2Squared Products */}
             <div>
               <h3 className="text-primary text-sm font-medium mb-4">
                 M2² Products
@@ -195,7 +195,7 @@ const Footer: React.FC = () => {
               <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                 <img
                   src="/m2square_logo.svg"
-                  alt="M2Square Finance Logo"
+                  alt="M2Squared Finance Logo"
                   className="h-[22px] object-contain"
                 />
 
@@ -222,10 +222,10 @@ const Footer: React.FC = () => {
 
           <div className="text-center mt-5">
             <div className="text-xs text-muted-foreground">
-              © M2Square Finance Limited 2025
+              © M2Squared Finance Limited 2025
             </div>
             <div className="mt-2 text-xs text-muted-foreground max-w-2xl mx-auto">
-              M2Square Finance Limited is licensed in Singapore as a Money
+              M2Squared Finance Limited is licensed in Singapore as a Money
               Service Operator by the Monetary Authority of Singapore, licence
               number: MSO-2023-00123.
             </div>

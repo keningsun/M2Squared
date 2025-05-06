@@ -78,7 +78,7 @@ const ProfitEngine: React.FC = () => {
       items: [
         { label: "Borrower Rate", value: "8-12%" },
         { label: "Lender Rate", value: "5-9%" },
-        { label: "M2Square Margin", value: "2-4%", isTotal: true },
+        { label: "M2Squared Margin", value: "2-4%", isTotal: true },
       ],
     },
     {

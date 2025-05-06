@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
           <h1 className="text-primary text-[52px] md:text-[72px] font-bold leading-[1.1] font-ubuntu tracking-[-2px] uppercase max-md:text-[40px]">
             On-Chain Liquidity meets
             <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            <span className="bg-clip-text text-transparent bg-primary/70 ">
               Cross-Border Payments
             </span>
           </h1>

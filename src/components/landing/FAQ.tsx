@@ -39,24 +39,24 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQ: React.FC = () => {
   const faqItems = [
     {
-      question: "What is M2Square's RWA platform?",
+      question: "What is M2Squared's RWA platform?",
       answer:
-        "M2Square is a Real World Asset (RWA) platform that connects on-chain liquidity with cross-border payment operations. We provide a bridge between digital asset markets and traditional payment systems, enabling stable yield opportunities for investors while offering rapid working capital solutions for payment businesses.",
+        "M2Squared is a Real World Asset (RWA) platform that connects on-chain liquidity with cross-border payment operations. We provide a bridge between digital asset markets and traditional payment systems, enabling stable yield opportunities for investors while offering rapid working capital solutions for payment businesses.",
     },
     {
-      question: "How does M2Square generate yield for investors?",
+      question: "How does M2Squared generate yield for investors?",
       answer:
-        "M2Square offers diversified lending pools with various maturities and APYs, designed specifically for cross-border payment demands. Our platform uses blockchain-powered smart contracts for trustless lending, providing real-time visibility into pool performance while implementing robust risk management strategies to maximize yields confidently.",
+        "M2Squared offers diversified lending pools with various maturities and APYs, designed specifically for cross-border payment demands. Our platform uses blockchain-powered smart contracts for trustless lending, providing real-time visibility into pool performance while implementing robust risk management strategies to maximize yields confidently.",
     },
     {
-      question: "What working capital solutions does M2Square offer?",
+      question: "What working capital solutions does M2Squared offer?",
       answer:
         "We provide immediate liquidity for international transactions, helping payment companies overcome lengthy bank transfers and reduce operational bottlenecks. Our stablecoin-based settlement system allows businesses to expand their global reach and secure real-time funds without waiting on traditional finance channels.",
     },
     {
-      question: "How does M2Square ensure compliance and security?",
+      question: "How does M2Squared ensure compliance and security?",
       answer:
-        "M2Square implements thorough Know Your Business (KYB) protocols to verify borrower legitimacy and ensure regulatory compliance. Our platform safeguards all participants through transparent credit assessments and secure repayment structures, while employing bank-level security measures including 256-bit encryption and continuous monitoring systems to protect your funds and information.",
+        "M2Squared implements thorough Know Your Business (KYB) protocols to verify borrower legitimacy and ensure regulatory compliance. Our platform safeguards all participants through transparent credit assessments and secure repayment structures, while employing bank-level security measures including 256-bit encryption and continuous monitoring systems to protect your funds and information.",
     },
   ];
 
