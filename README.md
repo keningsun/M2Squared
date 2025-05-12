@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# M2Squared
 
-## Project info
+M2Squared is a modern web application focused on on-chain liquidity and cross-border payments.
 
-**URL**: https://lovable.dev/projects/63e0844b-9ddc-47e4-9d0e-2c2547a9742f
+## Project Info
 
-## How can I edit this code?
+- **Production URL**: https://p-862293.vercel.app/
+- **Repository**: _please fill in your repo URL if public_
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- ⚡️ Built with Vite + React + TypeScript
+- 🎨 UI powered by shadcn-ui and Tailwind CSS
+- 📱 Responsive and modern design
+- 🔗 SEO and social sharing optimized (Open Graph & Twitter Card)
+- 🚀 Ready for Vercel deployment
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/63e0844b-9ddc-47e4-9d0e-2c2547a9742f) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v18 or above recommended)
+- npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
+cd M2Squared
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Development
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit [http://localhost:5173](http://localhost:5173) to view the app locally.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Preview Production Build
 
-## What technologies are used for this project?
+```sh
+npm run preview
+```
 
-This project is built with .
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This project is optimized for [Vercel](https://vercel.com/):
 
-## How can I deploy this project?
+1. Push your code to GitHub/GitLab/Bitbucket.
+2. Import your repo into Vercel.
+3. Set the root directory if needed (default is project root).
+4. Deploy!
 
-Simply open [Lovable](https://lovable.dev/projects/63e0844b-9ddc-47e4-9d0e-2c2547a9742f) and click on Share -> Publish.
+**Static assets** in the `public` folder (such as `/m2_preview.png`) will be served at the root of your deployed domain.
 
-## Can I connect a custom domain to my Lovable project?
+### SEO & Social Preview Image
 
-Yes it is!
+- The Open Graph and Twitter Card meta tags are set up in both `index.html` and `src/index.html`.
+- The preview image is located at:  
+  `public/m2_preview.png`
+- After deployment, the image will be accessible at:  
+  `https://p-862293.vercel.app/m2_preview.png`  
+  _(or your custom domain, e.g. `https://yourdomain.com/m2_preview.png` if configured)_
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Note:**  
+Social platforms (WeChat, Twitter, Facebook, etc.) require a public, absolute URL for preview images.  
+If you change the image, just replace `public/m2_preview.png` and redeploy.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Technologies Used
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Custom Domain
+
+To use a custom domain with Vercel:
+
+1. Go to your Vercel dashboard.
+2. Select your project.
+3. Navigate to **Settings > Domains**.
+4. Add your domain and follow the verification steps.
+
+## Static Assets
+
+All files in the `public` directory are served at the root of your deployed site.  
+For example, `public/m2_preview.png` → `https://yourdomain.com/m2_preview.png`
+
+## License
+
+_Include your license here if open source._
