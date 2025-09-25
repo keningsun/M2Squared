@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Check } from "lucide-react";
+import React, { useState } from 'react';
+import { Check } from 'lucide-react';
 
 interface ServiceProps {
   title: string;
@@ -25,8 +25,8 @@ const Tab: React.FC<TabProps> = ({ label, isActive, onClick }) => {
     <button
       className={`py-3 px-8 rounded-full text-base font-medium transition-colors ${
         isActive
-          ? "bg-primary text-primary-foreground"
-          : "bg-transparent text-primary hover:bg-primary/5"
+          ? 'bg-primary text-primary-foreground'
+          : 'bg-transparent text-primary hover:bg-primary/5'
       }`}
       onClick={onClick}
     >
@@ -52,7 +52,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`${index > 0 ? "mt-5" : "mt-5"} max-w-full`}
+            className={`${index > 0 ? 'mt-5' : 'mt-5'} max-w-full`}
           >
             <h4 className="text-primary text-xl font-semibold leading-[1.4]">
               {section.heading}
@@ -93,7 +93,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
           src={image}
           alt={title}
           className={`object-contain max-w-full h-auto max-h-[400px] ${
-            imageClassName || ""
+            imageClassName || ''
           }`}
         />
       </div>
@@ -118,104 +118,104 @@ const ServiceCard: React.FC<ServiceProps> = ({
 };
 
 const Services: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("yield");
+  const [activeTab, setActiveTab] = useState<string>('settlement');
 
   const services = [
     {
-      id: "yield",
-      tabLabel: "On-Chain Yield",
-      title: "ON-CHAIN YIELD POOLS",
-      image: "/s1.svg",
+      id: 'settlement',
+      tabLabel: 'Global Settlement',
+      title: 'GLOBAL SETTLEMENT NETWORK',
+      image: '/s1.svg',
       isImageLeft: true,
       sections: [
         {
-          heading: "Earn Stable Returns",
+          heading: 'Global Settlement Network',
           description:
-            "Access diversified lending pools designed to connect your \ndigital assets with real-world cross-border payment demands\n—maximize yields confidently.",
+            'Power your business with unified rails that connect stablecoin \nliquidity to local payment methods across high-growth markets.',
         },
         {
-          heading: "Transparent & Secure",
+          heading: 'Transparent & Secure',
           description:
-            "Leverage blockchain-powered smart contracts for trustless \nlending. Enjoy real-time visibility into pool performance and \nrobust risk management strategies.",
+            'Licensed operations across key regions with instant, low-cost transactions, backed by compliance-first APIs built for enterprises.',
         },
       ],
       benefits: [
-        "Physical and virtual cards",
-        "Issue cards in multiple countries",
-        "Over 11 million cards issued as Wise",
+        'Licensed operations across key regions',
+        'Instant, low-cost transactions',
+        'Compliance-first APIs for enterprises',
       ],
     },
     {
-      id: "capital",
-      tabLabel: "Working Capital",
-      title: "WORKING CAPITAL FINANCING",
-      image: "/s2.svg",
+      id: 'payouts',
+      tabLabel: 'Pay-in & Payouts',
+      title: 'PAY-IN & PAYOUTS',
+      image: '/s2.svg',
       isImageLeft: true,
       sections: [
         {
-          heading: "Accelerate Cross-Border Operations",
+          heading: 'Collect & Disburse Globally',
           description:
-            "Empower your payment company with immediate liquidity for \ninternational transactions. Overcome lengthy bank transfers \nand reduce operational bottlenecks.",
+            'Seamlessly collect payments worldwide and disburse in local \nfiat or stablecoins, enabling true borderless commerce.',
         },
         {
-          heading: "Scale Faster",
+          heading: 'Flexible Settlement Options',
           description:
-            "Take advantage of stablecoin-based settlements to expand \nyour global reach. Secure real-time funds to seize opportunities \nwithout waiting on traditional finance.",
+            'Choose from multiple settlement methods to optimize for speed, \ncost, and regulatory requirements across different markets.',
         },
       ],
       benefits: [
-        "Multi-currency debit cards with our API",
-        "Set up multi-user group configurations",
-        "Over 11 million debit cards issued so far",
+        'Global payment collection',
+        'Multi-currency disbursement',
+        'Flexible settlement options',
       ],
     },
     {
-      id: "compliance",
-      tabLabel: "Compliance & KYB",
-      title: "COMPLIANCE & KYB",
-      image: "/s3.svg",
+      id: 'liquidity',
+      tabLabel: 'Liquidity Solutions',
+      title: 'LIQUIDITY SOLUTIONS',
+      image: '/s3.svg',
       isImageLeft: true,
       sections: [
         {
-          heading: "Trusted Partnerships",
+          heading: 'On-Chain Liquidity Management',
           description:
-            "We implement thorough Know Your Business protocols, \nensuring borrower legitimacy and compliance. Build \nconfidence with verified partnerships.",
+            'Access pre-funded settlement pools and optimized cash flow \nmanagement through our comprehensive liquidity infrastructure.',
         },
         {
-          heading: "Reduced Risk",
+          heading: 'Smart Capital Allocation',
           description:
-            "Our RWA platform safeguards lenders through transparent \ncredit assessments and secure repayment structures, creating \na trustworthy environment for all stakeholders.",
+            'Automated liquidity optimization across multiple markets \nensures efficient capital utilization and minimal settlement delays.',
         },
       ],
       benefits: [
-        "Transparent credit assessments",
-        "Secure repayment structures",
-        "Comprehensive KYB protocols",
+        'Pre-funded settlement pools',
+        'Optimized cash flow management',
+        'Automated capital allocation',
       ],
     },
     {
-      id: "revolution",
-      tabLabel: "Payment Revolution",
-      title: "A PAYMENT REVOLUTION",
-      image: "/s4.svg",
+      id: 'compliance',
+      tabLabel: 'Compliance & KYC',
+      title: 'COMPLIANCE & KYC',
+      image: '/s4.svg',
       isImageLeft: true,
-      imageClassName: "w-[350px] h-[350px] object-contain",
+      imageClassName: 'max-h-[400px] object-contain',
       sections: [
         {
-          heading: "Real Results with On-Chain Liquidity",
+          heading: 'Regulatory Excellence',
           description:
-            "Discover how our RWA platform channels liquidity from digital \nasset markets into cross-border payments, cutting transaction \ndelays and propelling your business forward.",
+            'Comprehensive compliance framework ensuring adherence to \nglobal regulatory standards across all operational markets.',
         },
         {
-          heading: "Strategic Integration Pays Off",
+          heading: 'Streamlined Onboarding',
           description:
-            "Through meticulous risk management and streamlined \nprocesses, we enable rapid funding access for scaling your \noperations.",
+            'Efficient KYC/KYB processes that balance thorough verification \nwith fast business onboarding and user experience.',
         },
       ],
       benefits: [
-        "Reduced transaction delays",
-        "Streamlined cross-border payments",
-        "Blockchain-based transparency",
+        'Global regulatory compliance',
+        'Streamlined KYC/KYB processes',
+        'Enterprise-grade security',
       ],
     },
   ];
@@ -226,7 +226,7 @@ const Services: React.FC = () => {
   return (
     <section className="w-[1440px] max-w-full overflow-hidden mt-[133px] px-5 max-md:mt-10">
       <h2 className="text-primary text-5xl font-medium leading-none tracking-[-2px] max-md:text-[40px] mb-12">
-        Services That Fuel Your Business Growth
+        Services That Fuel Growth
       </h2>
 
       <div>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Plus } from "lucide-react";
+import React, { useState } from 'react';
+import { Plus } from 'lucide-react';
 
 interface FAQItemProps {
   question: string;
@@ -19,7 +19,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         <h3 className="text-[#70B6E8] text-lg font-medium">{question}</h3>
         <div
           className={`rounded-full border border-[#70B6E8] p-1 transition-transform ${
-            isOpen ? "rotate-45" : ""
+            isOpen ? 'rotate-45' : ''
           }`}
         >
           <Plus className="w-5 h-5 text-[#70B6E8]" />
@@ -27,7 +27,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100 pb-6" : "max-h-0 opacity-0"
+          isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
         }`}
       >
         <p className="text-[#70B6E8]/90 pr-8">{answer}</p>
@@ -39,24 +39,34 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQ: React.FC = () => {
   const faqItems = [
     {
-      question: "What is M2Squared's RWA platform?",
+      question: 'What is a stablecoin and why does it matter for businesses?',
       answer:
-        "M2Squared is a Real World Asset (RWA) platform that connects on-chain liquidity with cross-border payment operations. We provide a bridge between digital asset markets and traditional payment systems, enabling stable yield opportunities for investors while offering rapid working capital solutions for payment businesses.",
+        'Stablecoins are digital tokens pegged to real-world currencies like the US dollar. They enable instant, low-cost cross-border payments without relying on traditional banking intermediaries.',
     },
     {
-      question: "How does M2Squared generate yield for investors?",
+      question: 'What is M2Square’s Global Payment Network?',
       answer:
-        "M2Squared offers diversified lending pools with various maturities and APYs, designed specifically for cross-border payment demands. Our platform uses blockchain-powered smart contracts for trustless lending, providing real-time visibility into pool performance while implementing robust risk management strategies to maximize yields confidently.",
+        'A unified platform that lets businesses collect payments in stablecoins, pay expenses in fiat or stablecoins, and access liquidity — all within a compliant, secure framework.',
     },
     {
-      question: "What working capital solutions does M2Squared offer?",
+      question: 'How does M2Square ensure compliance and regulatory coverage?',
       answer:
-        "We provide immediate liquidity for international transactions, helping payment companies overcome lengthy bank transfers and reduce operational bottlenecks. Our stablecoin-based settlement system allows businesses to expand their global reach and secure real-time funds without waiting on traditional finance channels.",
+        'We operate under licenses in regions such as Mexico, Argentina, Peru, US, Philippines, and Chile, aligned with global standards like EU MiCA and US GENIUS Act.',
     },
     {
-      question: "How does M2Squared ensure compliance and security?",
+      question: 'Which businesses benefit most from stablecoin payments?',
       answer:
-        "M2Squared implements thorough Know Your Business (KYB) protocols to verify borrower legitimacy and ensure regulatory compliance. Our platform safeguards all participants through transparent credit assessments and secure repayment structures, while employing bank-level security measures including 256-bit encryption and continuous monitoring systems to protect your funds and information.",
+        'E-commerce merchants, gaming and live-streaming platforms, and payment companies seeking faster settlement, lower fees, and reliable access to global markets.',
+    },
+    {
+      question: 'How does M2Square make money?',
+      answer:
+        'Revenue comes from settlement fees, interest rate spreads, and liquidity optimization, ensuring a sustainable business model without hidden charges for merchants.',
+    },
+    {
+      question: 'What is M2Square’s long-term vision?',
+      answer:
+        'To become the trusted business bank on stablecoins — powering $1B+ in monthly settlement volume and serving as the global clearing rail for digital commerce.',
     },
   ];
 

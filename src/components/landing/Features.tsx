@@ -1,5 +1,5 @@
-import React from "react";
-import { Wallet, LineChart, BookOpen } from "lucide-react";
+import React from 'react';
+import { Globe, ArrowLeftRight, Banknote } from 'lucide-react';
 
 const FeatureCard: React.FC<{
   icon: React.ReactNode;
@@ -28,22 +28,22 @@ const FeatureCard: React.FC<{
 const Features: React.FC = () => {
   const features = [
     {
-      icon: <Wallet size={36} strokeWidth={1.5} />,
-      title: "INSTANT ACCESS \nTO CAPITAL",
+      icon: <Globe size={36} strokeWidth={1.5} />,
+      title: 'UNIFIED\nSETTLEMENT',
       description:
-        "Simplified process for obtaining cross-border \nworking capital. Reduces dependence on \nbank loans or VC.",
+        'Enable instant, low-cost cross-border payments \nwithout intermediaries, connecting stablecoin \nliquidity directly with local payment methods \nfor businesses worldwide.',
     },
     {
-      icon: <LineChart size={36} strokeWidth={1.5} />,
-      title: "ON-CHAIN YIELD\nOPPORTUNITIES",
+      icon: <ArrowLeftRight size={36} strokeWidth={1.5} />,
+      title: 'PAY-IN &\nPAYOUTS',
       description:
-        "Diverse lending pools with different maturities \nand APYs. Transparent smart contracts for \nsecure yield generation.",
+        'Accept customer payments in stablecoins globally \nand pay out to employees, vendors, or partners \nin their preferred currency, simplifying treasury \nmanagement and reducing costs.',
     },
     {
-      icon: <BookOpen size={36} strokeWidth={1.5} />,
-      title: "DEEP INDUSTRY\nEXPERTISE",
+      icon: <Banknote size={36} strokeWidth={1.5} />,
+      title: 'LIQUIDITY\nSOLUTIONS',
       description:
-        "Built by a team with extensive DeFi and global \npayments experience. Driving the PayFi \nrevolution.",
+        'Access scalable liquidity pools that bridge \nworking capital gaps, ensuring businesses can \nhandle high-volume flows with reliability, \ntransparency, and compliance built-in.',
     },
   ];
 
@@ -99,7 +99,7 @@ const Features: React.FC = () => {
 
       <div className="flex w-[1440px] max-w-full flex-col items-stretch max-md:mb-2.5 relative z-10">
         <h2 className="text-primary text-[40px] font-semibold leading-[44px] tracking-[-1.2px] text-center self-center max-md:max-w-full font-inter antialiased mb-[50px]">
-          Empowering businesses with next-gen payment solutions
+          Empowering businesses with stablecoin-native financial solutions
         </h2>
         <div className="flex items-stretch gap-5 mt-[30px] max-md:mt-10 max-md:flex-col">
           {features.map((feature, index) => (

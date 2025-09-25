@@ -1,5 +1,18 @@
-<svg width="384" height="369" viewBox="0 0 384 369" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="178.076" cy="234.692" r="90.5" transform="rotate(15 178.076 234.692)" fill="#70B6E8" fill-opacity="0.1" stroke="#70B6E8" stroke-width="12"/>
-<circle cx="264.88" cy="150.282" r="90.5" transform="rotate(15 264.88 150.282)" fill="#70B6E8" fill-opacity="0.1" stroke="#70B6E8" stroke-width="12"/>
-<circle cx="145.105" cy="118.188" r="90.5" transform="rotate(15 145.105 118.188)" fill="#70B6E8" fill-opacity="0.1" stroke="#70B6E8" stroke-width="12"/>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pay-in & Payouts - Bold double-headed flow, edge-to-edge -->
+
+  <!-- Wide pill channel across canvas -->
+  <rect x="32" y="140" width="336" height="120" rx="60" fill="#70B6E8" opacity="0.28"/>
+
+  <!-- Massive opposing arrows -->
+  <polygon points="32,200 96,140 96,260" fill="#70B6E8" opacity="0.6"/>
+  <polygon points="368,200 304,140 304,260" fill="#70B6E8" opacity="0.6"/>
+
+  <!-- Central hub (dominant) -->
+  <circle cx="200" cy="200" r="80" fill="#70B6E8" opacity="0.9"/>
+  <circle cx="200" cy="200" r="44" fill="#70B6E8" opacity="0.5"/>
+
+  <!-- Large side nodes close to edges -->
+  <rect x="32" y="64" width="112" height="72" rx="20" fill="#70B6E8" opacity="0.35"/>
+  <rect x="256" y="264" width="112" height="72" rx="20" fill="#70B6E8" opacity="0.35"/>
 </svg>

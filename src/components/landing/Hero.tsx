@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { HeroSpline } from "./HeroSpline";
+import React from 'react';
+import { HeroSpline } from './HeroSpline';
 
 const Hero: React.FC = () => {
   return (
@@ -11,18 +11,17 @@ const Hero: React.FC = () => {
       <div className="relative w-[1440px] max-w-full flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-20 z-10">
         {/* 文本内容 */}
         <div className="flex flex-col items-start text-left max-w-xl">
-          <h1 className="text-primary text-[52px] md:text-[72px] font-bold leading-[1.1] font-ubuntu tracking-[-2px] uppercase max-md:text-[40px]">
-            On-Chain Liquidity meets
+          <h1 className="text-primary text-[52px] md:text-[72px] font-bold leading-[1.1] font-ubuntu tracking-[-2px] max-md:text-[40px]">
+            Redefining Global Payments
             <br />
             <span className="bg-clip-text text-transparent bg-primary/70 ">
-              Cross-Border Payments
+              with Stablecoin Banking
             </span>
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl font-normal leading-7 mt-6">
-            Empower your global payment operations with a secure, efficient, and
-            compliant RWA platform—unlocking stable yield opportunities for
-            on-chain investors and rapid working capital for payment businesses.
+            Compliant, instant, and borderless financial infrastructure for the
+            stablecoin era.
           </p>
 
           <div className="flex gap-5 mt-10">
@@ -36,9 +35,9 @@ const Hero: React.FC = () => {
             <a
               href="#"
               className="flex justify-center text-primary min-h-12 py-4 px-8 rounded-[50px] border border-primary hover:bg-primary/5 transition-all duration-300"
-              aria-label="Learn More"
+              aria-label="Talk to Us"
             >
-              Learn More
+              Talk to Us
             </a>
           </div>
         </div>
@@ -48,7 +47,7 @@ const Hero: React.FC = () => {
           <div className="absolute w-[600px] h-[600px] rounded-full blur-3xl"></div>
           <div
             className="relative w-full aspect-square max-w-[600px] rounded-full overflow-hidden"
-            style={{ background: "transparent" }}
+            style={{ background: 'transparent' }}
           >
             <HeroSpline className="rounded-full" />
           </div>

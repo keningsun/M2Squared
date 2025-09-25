@@ -1,5 +1,5 @@
-import React from "react";
-import { DollarSign, ArrowUpDown, BarChart3 } from "lucide-react";
+import React from 'react';
+import { DollarSign, ArrowUpDown, BarChart3 } from 'lucide-react';
 
 interface ProfitCardProps {
   title: string;
@@ -71,59 +71,52 @@ const ProfitCard: React.FC<ProfitCardProps> = ({
 const ProfitEngine: React.FC = () => {
   const profitCards = [
     {
-      title: "Rate Difference",
+      title: 'Interest Rate Spread',
       description:
-        "Margin-based revenue through interest rate spreads between borrowers and lenders, creating sustainable profit.",
+        'Revenue from the difference between liquidity provider rates and merchant settlement rates.',
       icon: <ArrowUpDown size={28} strokeWidth={2} />,
       items: [
-        { label: "Borrower Rate", value: "8-12%" },
-        { label: "Lender Rate", value: "5-9%" },
-        { label: "M2Squared Margin", value: "2-4%", isTotal: true },
+        { label: 'Merchant Rate', value: '8-12%' },
+        { label: 'LP Rate', value: '5-9%' },
+        { label: 'M2Square Spread', value: '2-4%', isTotal: true },
       ],
     },
     {
-      title: "On-Chain Management",
+      title: 'Service Fees',
       description:
-        "Additional returns from liquidity mining and DeFi yield optimizations, enhancing overall platform value.",
-      icon: <BarChart3 size={28} strokeWidth={2} />,
-      items: [
-        { label: "Liquidity Mining", value: "1-2%" },
-        { label: "DeFi Yield Farming", value: "2-5%" },
-        { label: "Total Additional Yield", value: "3-7%", isTotal: true },
-      ],
-    },
-    {
-      title: "Revenue Streams",
-      description:
-        "Diverse income sources from transaction fees and platform services, providing consistent cash flow.",
+        'Cross-border settlement and transaction fees charged to businesses.',
       icon: <DollarSign size={28} strokeWidth={2} />,
       items: [
-        { label: "Transaction Fees", value: "0.5-1%" },
-        { label: "Platform Services", value: "1-3%" },
-        { label: "Total Revenue", value: "1.5-4%", isTotal: true },
+        { label: 'Settlement Fees', value: '0.5-1%' },
+        { label: 'Transaction Fees', value: '0.2-0.5%' },
+        { label: 'Total Service Fees', value: '0.7-1.5%', isTotal: true },
+      ],
+    },
+    {
+      title: 'On-Chain Liquidity Optimization',
+      description:
+        'Additional yield from optimizing stablecoin reserves across regulated opportunities.',
+      icon: <BarChart3 size={28} strokeWidth={2} />,
+      items: [
+        { label: 'Yield Optimization', value: '1-3%' },
+        { label: 'Liquidity Mining', value: '0.5-2%' },
+        { label: 'Total Additional Yield', value: '1.5-5%', isTotal: true },
       ],
     },
   ];
 
   return (
-    <section className="bg-icon-bg self-stretch flex w-full flex-col mt-[80px] px-20 py-[100px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[80px] relative overflow-hidden border-t border-b border-gray-100">
+    <section className="bg-icon-bg self-stretch flex w-full flex-col mt-[80px] py-[140px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[80px] relative overflow-hidden border-t border-b border-gray-100">
       <div className="flex w-[1440px] max-w-full mx-auto relative z-10">
         <div className="w-full">
-          <div className="flex items-baseline mb-4">
-            <div className="w-10 h-1 bg-primary rounded-full mr-4"></div>
-            <h3 className="text-primary text-xl font-medium">
-              Profit Mechanisms
-            </h3>
-          </div>
-
           <h2 className="text-primary text-[40px] font-semibold leading-[44px] tracking-[-1.2px] mb-4 font-inter antialiased">
-            Our Triple-Engine{" "}
-            <span className="text-primary font-bold">Profit Model</span>
+            How M2Square Monetizes{' '}
+            <span className="text-primary font-bold">Stablecoin Payments</span>
           </h2>
 
           <p className="text-muted-foreground text-xl max-w-[700px] mb-12">
-            Leveraging blockchain technology to create multiple revenue streams
-            while maintaining competitive rates for all parties.
+            Multiple revenue streams from stablecoin payment infrastructure
+            while delivering value to businesses and liquidity providers.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
