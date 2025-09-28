@@ -1,53 +1,61 @@
-# M2Squared
+# M2Square
 
-M2Squared is a modern web application focused on on-chain liquidity and cross-border payments.
+M2Square is a Global Payment Network for Stablecoin Banking, providing compliant, instant, and borderless financial infrastructure for the stablecoin era.
 
 ## Project Info
 
-- **Production URL**: https://p-862293.vercel.app/
-- **Repository**: _please fill in your repo URL if public_
+- **Production URL**: https://m2square.xyz/
+- **Twitter**: [@m2squarex](https://x.com/m2squarex)
+- **Official Domain**: m2square.xyz
 
-## Features
+## What M2Square Offers
+
+- 🌐 **Global Settlement Network**: Unified rails connecting stablecoin liquidity to local payment methods
+- 💰 **Pay-in & Payouts**: Collect payments globally, disburse in local fiat or stablecoins
+- 🏦 **Liquidity Solutions**: On-chain liquidity to pre-fund settlements and manage cash flow
+- 🔒 **Compliance & KYC**: Licensed operations across key regions with enterprise-grade security
+
+## Technical Features
 
 - ⚡️ Built with Vite + React + TypeScript
 - 🎨 UI powered by shadcn-ui and Tailwind CSS
 - 📱 Responsive and modern design
-- 🔗 SEO and social sharing optimized (Open Graph & Twitter Card)
-- 🚀 Ready for Vercel deployment
+- 🔗 SEO optimized with Open Graph & Twitter Card support
+- 🚀 Deployed on Vercel with custom domain
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (v18 or above recommended)
-- npm
+- pnpm (recommended) or npm
 
 ### Installation
 
 ```sh
 git clone <YOUR_GIT_URL>
-cd M2Squared
-npm install
+cd M2Square
+pnpm install
 ```
 
 ### Development
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
-Visit [http://localhost:5173](http://localhost:5173) to view the app locally.
+Visit [http://localhost:8081](http://localhost:8081) to view the app locally.
 
 ### Build for Production
 
 ```sh
-npm run build
+pnpm build
 ```
 
 ### Preview Production Build
 
 ```sh
-npm run preview
+pnpm preview
 ```
 
 ## Deployment
@@ -63,39 +71,53 @@ This project is optimized for [Vercel](https://vercel.com/):
 
 ### SEO & Social Preview Image
 
-- The Open Graph and Twitter Card meta tags are set up in both `index.html` and `src/index.html`.
-- The preview image is located at:  
-  `public/m2_preview.png`
-- After deployment, the image will be accessible at:  
-  `https://p-862293.vercel.app/m2_preview.png`  
-  _(or your custom domain, e.g. `https://yourdomain.com/m2_preview.png` if configured)_
+- Comprehensive SEO metadata including Open Graph and Twitter Card tags
+- Preview image: `public/m2_preview.png`
+- Live at: `https://m2square.xyz/m2_preview.png`
+- Optimized for social sharing across platforms (Twitter, Facebook, WeChat, etc.)
 
-**Note:**  
-Social platforms (WeChat, Twitter, Facebook, etc.) require a public, absolute URL for preview images.  
-If you change the image, just replace `public/m2_preview.png` and redeploy.
+**SEO Features:**
+
+- Structured metadata with keywords optimization
+- Twitter Card integration (@m2squarex)
+- Canonical URLs pointing to m2square.xyz
+- Theme color and format detection optimization
 
 ## Technologies Used
 
-- [Vite](https://vitejs.dev/)
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/) - Fast build tool
+- [React](https://react.dev/) - UI framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Lucide React](https://lucide.dev/) - Icons
 
-## Custom Domain
+## Project Structure
 
-To use a custom domain with Vercel:
+```
+src/
+├── components/
+│   └── landing/          # Landing page components
+│       ├── Hero.tsx      # Hero section with CTA
+│       ├── Features.tsx  # Three-card features section
+│       ├── Services.tsx  # Tabbed services showcase
+│       ├── CTA.tsx       # Call-to-action section
+│       ├── FAQ.tsx       # FAQ accordion
+│       └── Footer.tsx    # Footer with social links
+public/
+├── s1.svg - s4.svg      # Service illustrations
+├── m2_preview.png       # Social preview image
+└── m2square_logo.svg    # Company logo
+```
 
-1. Go to your Vercel dashboard.
-2. Select your project.
-3. Navigate to **Settings > Domains**.
-4. Add your domain and follow the verification steps.
+## Content Sections
 
-## Static Assets
-
-All files in the `public` directory are served at the root of your deployed site.  
-For example, `public/m2_preview.png` → `https://yourdomain.com/m2_preview.png`
+1. **Hero**: "Start Building on Stablecoins" with animated network visualization
+2. **Features**: Unified Settlement, Pay-in & Payouts, Liquidity Solutions
+3. **Services**: Tabbed interface showcasing 4 core offerings
+4. **FAQ**: 6 questions covering stablecoins, compliance, and business model
+5. **Footer**: 5-column layout with social links and company info
 
 ## License
 
-_Include your license here if open source._
+_Proprietary - M2Square Finance_
